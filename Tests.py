@@ -12,6 +12,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 options = Options()
+
 options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
 
