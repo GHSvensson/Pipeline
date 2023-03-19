@@ -36,3 +36,20 @@ class TestGamefunctionalitytest:
         self.driver.find_element(By.ID, "start-button").click()
         self.driver.execute_script("window.scrollTo(0,75.55555725097656)")
         self.driver.find_element(By.ID, "return-button").click()
+
+
+class TestInstructionstest():
+        def setup_method(self, method):
+        self.driver = webdriver.Chrome()
+        self.vars = {}
+
+      def teardown_method(self, method):
+        self.driver.quit()
+
+      def test_instructionstest(self):
+        self.driver.get("https://ghsvensson.github.io/NeonTyper/")
+        self.driver.find_element(By.ID, "instr-button").click()
+        elements = self.driver.find_elements(By.ID, "instr")
+        assert len(elements) > 0
+        self.driver.find_element(By.ID, "checkmark-button").click()
+        self.driver.close()
