@@ -38,7 +38,7 @@ class TestGamefunctionalitytest:
         self.driver.find_element(By.ID, "return-button").click()
 
 
-class TestInstructionstest():
+class TestInstructionstest:
     def setup_method(self, method):
         self.driver = webdriver.Chrome()
         self.vars = {}
