@@ -39,14 +39,14 @@ class TestGamefunctionalitytest:
 
 
 class TestInstructionstest():
-        def setup_method(self, method):
+    def setup_method(self, method):
         self.driver = webdriver.Chrome()
         self.vars = {}
 
-      def teardown_method(self, method):
+    def teardown_method(self, method):
         self.driver.quit()
 
-      def test_instructionstest(self):
+    def test_instructionstest(self):
         self.driver.get("https://ghsvensson.github.io/NeonTyper/")
         self.driver.find_element(By.ID, "instr-button").click()
         elements = self.driver.find_elements(By.ID, "instr")
