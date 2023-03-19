@@ -22,7 +22,7 @@ class TestFullscreentest:
         self.driver.find_element(By.ID, "full-screen-button").click()
 
 
-class TestGamefunctionalitytest():
+class TestGamefunctionalitytest:
     def setup_method(self, method):
         self.driver = webdriver.Chrome()
         self.vars = {}
