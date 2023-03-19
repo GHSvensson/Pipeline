@@ -1,13 +1,15 @@
-import pytest
-import time
 import json
+import time
+
+import pytest
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
 
 class TestFullscreentest:
     def setup_method(self, method):
@@ -21,4 +23,3 @@ class TestFullscreentest:
         self.driver.get("https://ghsvensson.github.io/NeonTyper/")
         self.driver.find_element(By.ID, "full-screen-button").click()
         self.driver.find_element(By.ID, "full-screen-button").click()
-  
