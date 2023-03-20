@@ -53,3 +53,15 @@ class TestInstructionstest:
         assert len(elements) > 0
         self.driver.find_element(By.ID, "checkmark-button").click()
         self.driver.close()
+        
+class TestCorrecttitletest:
+    def setup_method(self, method):
+    self.driver = webdriver.Chrome()
+    self.vars = {}
+
+    def teardown_method(self, method):
+    self.driver.quit()
+
+    def test_correcttitletest(self):
+    self.driver.get("https://ghsvensson.github.io/NeonTyper/")
+    assert self.driver.find_element(By.CSS_SELECTOR, "h1").text == "NeonTyper"
