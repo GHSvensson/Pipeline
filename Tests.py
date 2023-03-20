@@ -53,7 +53,8 @@ class TestInstructionstest:
         assert len(elements) > 0
         self.driver.find_element(By.ID, "checkmark-button").click()
         self.driver.close()
-        
+
+
 class TestCorrecttitletest:
     def setup_method(self, method):
         self.driver = webdriver.Chrome()
