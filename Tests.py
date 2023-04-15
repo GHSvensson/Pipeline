@@ -9,7 +9,6 @@ driver = webdriver.Chrome(options=options)
 
 
 class TestFullscreentest:
-
     def setup_method(self, method):
         self.driver = webdriver.Chrome()
         self.vars = {}
