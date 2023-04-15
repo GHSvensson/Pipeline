@@ -9,14 +9,15 @@ driver = webdriver.Chrome(options=options)
 
 
 class TestFullscreentest:
-  def setup_method(self, method):
+
+    def setup_method(self, method):
         self.driver = webdriver.Chrome()
         self.vars = {}
-  
-  def teardown_method(self, method):
+
+    def teardown_method(self, method):
         self.driver.quit()
-  
-  def test_fullscreentest(self):
+
+    def test_fullscreentest(self):
         self.driver.get("https://ghsvensson.github.io/NeonTyper/")
         self.driver.find_element(By.ID, "full-screen-button").click()
         elements = self.driver.find_elements(By.ID, "full-screen-button")
