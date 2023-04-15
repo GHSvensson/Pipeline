@@ -34,10 +34,13 @@ class TestGamefunctionalitytest:
 
     def test_gamefunctionalitytest(self):
         self.driver.get("https://ghsvensson.github.io/NeonTyper/")
+        elements = self.driver.find_elements(By.ID, "start-button")
+        assert len(elements) > 0
         self.driver.find_element(By.CSS_SELECTOR, ".active").click()
         self.driver.find_element(By.ID, "start-button").click()
         self.driver.execute_script("window.scrollTo(0,75.55555725097656)")
-        self.driver.find_element(By.ID, "return-button").click()
+        assert self.driver.find_element(By.CSS_SELECTOR, "h2").text == "You lost"
+        self.driver.close()
 
 
 class TestInstructionstest:
